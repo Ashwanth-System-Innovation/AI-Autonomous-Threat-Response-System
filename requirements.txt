@@ -1,0 +1,297 @@
+# ==============================================================================
+#  ThreatSentinel AI — Python Dependencies
+#  Engineered by Ashwanth | Ashwanth System & Innovation
+#  Website : https://sites.google.com/view/ashwanthtechsolution
+#  Contact : ashwanth@system-innovation.dev
+#  License : MIT © 2025 Ashwanth System & Innovation
+# ==============================================================================
+#
+#  Install all dependencies:
+#      pip install -r requirements.txt
+#
+#  Install with extras (dev + test):
+#      pip install -r requirements.txt -r requirements-dev.txt
+#
+#  Upgrade all pinned packages:
+#      pip install --upgrade -r requirements.txt
+#
+# ==============================================================================
+
+
+# ------------------------------------------------------------------------------
+# 🤖  LLM PROVIDER SDKs
+#     Core AI engines powering ThreatSentinel AI
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+anthropic>=0.49.0                   # Anthropic Claude 4.5 — Extended Thinking support
+openai>=1.75.0                      # OpenAI GPT-5.2 + o3/o4-mini reasoning models
+google-genai>=1.10.0                # Google Gemini 3 — multimodal + extended thinking
+mistralai>=1.0.0                    # Mistral Large 3 / Medium 3.1 / Magistral 1.2
+groq>=0.23.0                        # Groq ultra-fast inference (LLaMA, Mistral, DeepSeek)
+ollama>=0.4.0                       # Ollama local LLM client (LLaMA 3.3, Mistral, DeepSeek)
+boto3>=1.38.0                       # AWS Bedrock LLM access (Claude, Llama via AWS)
+azure-ai-inference>=1.0.0b9         # Azure OpenAI + Azure AI models
+cohere>=5.13.0                      # Cohere Command R+ for RAG-based threat analysis
+together>=1.4.0                     # Together AI — open-source model hosting
+
+
+# ------------------------------------------------------------------------------
+# 🧠  LANGCHAIN & ORCHESTRATION FRAMEWORK
+#     Multi-step agentic threat analysis pipelines
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+langchain>=0.3.20                   # Core LangChain orchestration
+langchain-core>=0.3.50              # LangChain primitives, runnables, schemas
+langchain-community>=0.3.20         # Community integrations (tools, loaders, vectorstores)
+langchain-openai>=0.3.14            # OpenAI LangChain integration
+langchain-anthropic>=0.3.12         # Anthropic LangChain integration
+langchain-google-genai>=2.1.4       # Google Gemini LangChain integration
+langchain-mistralai>=0.2.10         # Mistral LangChain integration
+langchain-groq>=0.3.2               # Groq LangChain integration
+langgraph>=0.3.21                   # Multi-agent stateful graph orchestration
+langsmith>=0.3.27                   # LangSmith tracing and evaluation
+llama-index>=0.12.5                 # LlamaIndex RAG framework for threat knowledge bases
+llama-index-llms-anthropic>=0.6.5   # LlamaIndex Anthropic connector
+llama-index-llms-openai>=0.4.6      # LlamaIndex OpenAI connector
+llama-index-embeddings-openai>=0.3.1 # OpenAI embeddings via LlamaIndex
+
+
+# ------------------------------------------------------------------------------
+# 🔢  EMBEDDINGS, VECTOR STORES & SEMANTIC SEARCH
+#     Threat knowledge base similarity search and RAG
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+sentence-transformers>=3.4.1        # Local sentence embeddings (MITRE ATT&CK semantic search)
+faiss-cpu>=1.9.0                    # Facebook AI Similarity Search — vector indexing
+chromadb>=0.6.3                     # ChromaDB local vector store
+pinecone-client>=5.0.1              # Pinecone cloud vector database
+qdrant-client>=1.13.3               # Qdrant vector store client
+weaviate-client>=4.11.2             # Weaviate vector database client
+pgvector>=0.3.6                     # pgvector — PostgreSQL vector extension ORM
+tiktoken>=0.9.0                     # OpenAI token counting / context window management
+tokenizers>=0.21.1                  # HuggingFace tokenizers (fast BPE)
+
+
+# ------------------------------------------------------------------------------
+# 🧬  DEEP LEARNING & ML FRAMEWORKS
+#     GNN-based zero-day detection, anomaly scoring
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+torch>=2.6.0                        # PyTorch — Graph Neural Network zero-day detector
+torchvision>=0.21.0                 # PyTorch vision utilities
+torchaudio>=2.6.0                   # PyTorch audio (future voice-based threat reporting)
+tensorflow>=2.19.0                  # TensorFlow — ensemble threat classifier
+keras>=3.9.0                        # Keras high-level neural network API
+scikit-learn>=1.6.1                 # ML utilities: clustering, anomaly detection, scoring
+xgboost>=2.1.4                      # XGBoost — DREAD score regression model
+lightgbm>=4.6.0                     # LightGBM — fast gradient boosting for risk scoring
+numpy>=2.2.4                        # Numerical computing
+scipy>=1.15.2                       # Scientific algorithms (statistical scoring)
+pandas>=2.2.3                       # Data manipulation for threat logs and reports
+networkx>=3.4.2                     # Graph analysis — attack path / kill chain modeling
+torch-geometric>=2.6.1              # PyTorch Geometric — GNN for network topology threats
+
+
+# ------------------------------------------------------------------------------
+# 🌐  WEB FRAMEWORK & API SERVER
+#     REST API mode for enterprise integrations
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+streamlit>=1.44.0                   # Streamlit UI engine
+fastapi>=0.115.12                   # FastAPI REST API server
+uvicorn[standard]>=0.34.0           # ASGI server for FastAPI
+gunicorn>=23.0.0                    # Production WSGI/ASGI process manager
+pydantic>=2.11.3                    # Data validation and settings management
+pydantic-settings>=2.9.1            # Pydantic-based .env configuration loader
+httpx>=0.28.1                       # Async HTTP client (LLM API calls, webhook delivery)
+aiohttp>=3.11.16                    # Async HTTP framework
+websockets>=15.0.1                  # WebSocket support (real-time threat streaming)
+starlette>=0.46.1                   # ASGI toolkit (FastAPI core)
+python-multipart>=0.0.20            # File upload support (architecture diagram ingestion)
+
+
+# ------------------------------------------------------------------------------
+# 🗄️  DATABASE & CACHING
+#     Audit logging, session state, threat data persistence
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+sqlalchemy>=2.0.40                  # ORM for PostgreSQL / SQLite audit log
+alembic>=1.15.2                     # Database migration management
+asyncpg>=0.30.0                     # Async PostgreSQL driver
+psycopg2-binary>=2.9.10             # Sync PostgreSQL driver
+redis>=5.2.1                        # Redis client — session state, rate limiting
+hiredis>=3.1.1                      # C-accelerated Redis parser
+motor>=3.7.0                        # Async MongoDB driver (threat intelligence feeds)
+pymongo>=4.12.1                     # MongoDB client
+elasticsearch>=8.17.2               # Elasticsearch client — threat log indexing (ELK stack)
+opensearch-py>=2.8.0                # OpenSearch client (alternative to Elasticsearch)
+influxdb-client>=1.48.0             # InfluxDB — time-series metrics for threat events
+
+
+# ------------------------------------------------------------------------------
+# 📡  MESSAGING & EVENT STREAMING
+#     Real-time network traffic ingestion pipeline
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+confluent-kafka>=2.8.0              # Apache Kafka client — real-time threat event streaming
+aiokafka>=0.12.0                    # Async Kafka consumer/producer
+celery>=5.4.0                       # Distributed task queue for async threat analysis
+kombu>=5.4.2                        # Messaging library (Celery transport layer)
+pika>=1.3.2                         # RabbitMQ AMQP client
+nats-py>=2.10.0                     # NATS messaging — lightweight event bus
+
+
+# ------------------------------------------------------------------------------
+# 🔐  SECURITY, CRYPTOGRAPHY & AUTH
+#     API key protection, JWT, secrets management
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+cryptography>=44.0.3                # Cryptographic primitives (AES, RSA, ECDSA)
+PyJWT>=2.10.1                       # JWT token generation and verification
+passlib[bcrypt]>=1.7.4              # Password hashing (bcrypt)
+python-jose[cryptography]>=3.3.0    # JOSE — JWT/JWE/JWS implementation
+authlib>=1.4.1                      # OAuth2 / OpenID Connect client
+hvac>=2.3.0                         # HashiCorp Vault client — secrets management
+boto3-secretsmanager>=1.0.0         # AWS Secrets Manager integration
+azure-keyvault-secrets>=4.9.0       # Azure Key Vault secrets client
+oauthlib>=3.2.2                     # OAuth 1.0 / 2.0 utilities
+pyOpenSSL>=25.0.0                   # OpenSSL Python bindings
+certifi>=2025.1.31                  # Mozilla CA certificate bundle
+bcrypt>=4.3.0                       # Bcrypt password hashing
+
+
+# ------------------------------------------------------------------------------
+# 🐙  GITHUB & SOURCE CODE INTEGRATION
+#     Repository-level threat modeling and code analysis
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+PyGithub>=2.6.1                     # GitHub REST API client (public + Enterprise)
+gitpython>=3.1.44                   # Git repository introspection
+pygments>=2.19.1                    # Syntax highlighting for code-level threat reports
+tree-sitter>=0.24.4                 # AST parsing — static analysis across languages
+semgrep>=1.115.0                    # Static analysis / SAST rule engine
+bandit>=1.8.3                       # Python SAST security linter
+safety>=3.3.4                       # Dependency vulnerability checker
+pip-audit>=2.9.0                    # pip dependency audit (CVE scanning)
+
+
+# ------------------------------------------------------------------------------
+# 🖼️  MULTI-MODAL & VISION
+#     Architecture diagram and flowchart ingestion
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+Pillow>=11.2.1                      # Image processing (PNG, JPG, SVG, diagram input)
+opencv-python-headless>=4.11.0.86   # Computer vision — diagram preprocessing
+pytesseract>=0.3.13                 # OCR — extract text from architecture diagrams
+pdf2image>=1.17.0                   # Convert PDF architecture docs to images
+pypdf>=5.4.0                        # PDF parsing — extract system descriptions
+python-docx>=1.1.2                  # Word document parsing for system specs
+openpyxl>=3.1.5                     # Excel parsing — asset inventory ingestion
+cairosvg>=2.7.1                     # SVG → PNG conversion for diagram analysis
+
+
+# ------------------------------------------------------------------------------
+# 📊  OBSERVABILITY, METRICS & MONITORING
+#     Production-grade visibility for threat detection pipeline
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+prometheus-client>=0.21.1           # Prometheus metrics endpoint
+opentelemetry-api>=1.32.0           # OpenTelemetry distributed tracing API
+opentelemetry-sdk>=1.32.0           # OpenTelemetry SDK
+opentelemetry-exporter-otlp>=1.32.0 # OTLP exporter (Jaeger, Grafana Tempo)
+opentelemetry-instrumentation-fastapi>=0.53b0  # Auto-instrument FastAPI
+opentelemetry-instrumentation-httpx>=0.53b0    # Auto-instrument HTTPX
+sentry-sdk[fastapi]>=2.25.1         # Sentry error tracking
+structlog>=25.2.0                   # Structured JSON logging
+loguru>=0.7.3                       # Developer-friendly logging
+
+
+# ------------------------------------------------------------------------------
+# 🔔  ALERTING & INCIDENT RESPONSE
+#     SOC notifications and auto-response integrations
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+slack-sdk>=3.35.0                   # Slack API — SOC threat alert notifications
+jira>=3.8.0                         # JIRA ticket creation from critical threats
+servicenow>=0.3.4                   # ServiceNow ITSM integration
+pagerduty>=2.4.0                    # PagerDuty on-call alerting
+twilio>=9.5.2                       # SMS / voice alerting for critical incidents
+sendgrid>=6.11.0                    # Email alerting via SendGrid
+
+
+# ------------------------------------------------------------------------------
+# 🧪  TESTING & QUALITY ASSURANCE
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+pytest>=8.3.5                       # Test framework
+pytest-asyncio>=0.26.0              # Async test support
+pytest-cov>=6.1.0                   # Code coverage reporting
+pytest-xdist>=3.6.1                 # Parallel test execution
+pytest-mock>=3.14.0                 # Mock/patch utilities
+pytest-benchmark>=5.1.0             # Performance benchmarking
+hypothesis>=6.131.5                 # Property-based testing (fuzz LLM inputs)
+faker>=37.1.0                       # Fake data generation for test fixtures
+respx>=0.22.0                       # Mock HTTPX requests in tests
+moto[s3,secretsmanager]>=5.1.3      # Mock AWS services in tests
+
+
+# ------------------------------------------------------------------------------
+# 🛠️  DEVELOPER UTILITIES & CODE QUALITY
+#     — Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+python-dotenv>=1.1.0                # .env file loading
+click>=8.1.8                        # CLI framework (ThreatSentinel CLI mode)
+rich>=14.0.0                        # Beautiful terminal output and progress bars
+typer>=0.15.2                       # Typer CLI builder (built on Click)
+tqdm>=4.67.1                        # Progress bars for batch analysis
+tenacity>=9.1.2                     # Retry logic for flaky LLM API calls
+cachetools>=5.5.2                   # In-memory caching for repeated threat queries
+apscheduler>=3.11.0                 # Scheduled jobs (periodic repo scans)
+watchdog>=6.0.0                     # File system watcher for live config reload
+jinja2>=3.1.6                       # Templating engine for report generation
+markdown>=3.7                       # Markdown rendering
+mdformat>=0.7.22                    # Markdown formatter for clean report output
+weasyprint>=65.1                    # HTML → PDF report export
+reportlab>=4.4.1                    # Programmatic PDF generation
+python-pptx>=1.0.2                  # PowerPoint threat report generation
+tabulate>=0.9.0                     # ASCII table formatting for CLI reports
+arrow>=1.3.0                        # Human-friendly datetime handling
+python-slugify>=8.0.4               # Slug generation for report file names
+colorama>=0.4.6                     # Cross-platform terminal colour support
+
+
+# ------------------------------------------------------------------------------
+# 🌐  NETWORKING & HTTP SECURITY
+#     Snyk-pinned security patches — maintained by Ashwanth System & Innovation
+# ------------------------------------------------------------------------------
+
+tornado>=6.4.2                      # Pinned by Snyk — CVE mitigation
+requests>=2.32.2                    # Pinned by Snyk — CVE mitigation
+urllib3>=2.2.2                      # Pinned by Snyk — CVE mitigation
+anyio>=4.4.0                        # Pinned by Snyk — CVE mitigation
+zipp>=3.19.1                        # Pinned by Snyk — CVE mitigation
+h11>=0.16.0                         # Pinned by Snyk — CVE mitigation
+aiofiles>=24.1.0                    # Async file I/O
+chardet>=5.2.0                      # Character encoding detection
+idna>=3.10                          # Internationalized domain names
+
+
+# ==============================================================================
+#  © 2025 Ashwanth | Ashwanth System & Innovation
+#  ThreatSentinel AI — Built with precision. Secured by design. 🛡️
+#  https://sites.google.com/view/ashwanthtechsolution
+# ==============================================================================
